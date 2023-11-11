@@ -12,10 +12,15 @@ namespace myro
 		public GameObject Menu;
 		public GameObject Canvas;
 
-		void Start()
+		private bool _localPlayerJoined;
+
+		void OnEnable()
 		{
-			Canvas.SetActive(false);
-			Menu.SetActive(false);
+			if (!_localPlayerJoined)
+			{
+				Canvas.SetActive(false);
+				Menu.SetActive(false);
+			}
 		}
 
 		public void ToggleMenu()
@@ -25,8 +30,10 @@ namespace myro
 
 		public bool IsPlayerOnAndroid()
 		{
-#if UNITY_ANDROID
-		return !Networking.LocalPlayer.IsUserInVR();
+#if UNITY_EDITOR
+			return false;
+#elif UNITY_ANDROID
+			return !Networking.LocalPlayer.IsUserInVR();
 #else
 			return false;
 #endif
@@ -36,6 +43,7 @@ namespace myro
 		{
 			if (player.isLocal)
 			{
+				_localPlayerJoined = true;
 				Canvas.SetActive(IsPlayerOnAndroid());
 			}
 		}

@@ -13,24 +13,27 @@ namespace myro
 		public GameObject[] GameObjectList;
 
 		[Header("Do not touch this")]
-		public UnityEngine.UI.Toggle Toggle;
+		public GameObject CheckmarkImage;
 
+		private bool _isVisible;
 		void Start()
 		{
-			Toggle.isOn = ShownByDefault;
+			SetVisibility(ShownByDefault);
 		}
 
-		public void Toggled()
+		private void SetVisibility(bool val)
 		{
-			foreach(var go in GameObjectList)
+			_isVisible = val;
+			CheckmarkImage.SetActive(val);
+			foreach (var go in GameObjectList)
 			{
-				go.SetActive(Toggle.isOn);
+				go.SetActive(val);
 			}
 		}
 
 		public void Pressed()
 		{
-			Toggle.isOn = !Toggle.isOn;
+			SetVisibility(!_isVisible);
 		}
 	}
 }
