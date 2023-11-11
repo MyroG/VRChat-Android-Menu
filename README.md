@@ -19,8 +19,10 @@ With this menu you can
 
 There are two kind of buttons :
 - AndroidButtonTeleport : Teleports the player at a given location, the location can be set in the "Teleport Player" component
+ 
 ![Showcase](https://github.com/MyroG/VRChat-Android-Menu/blob/master/Doc/Teleport.PNG)
 - AndroidToggleButton : Toggles a list of GameObjects, if you want all GameObjects to be shown by default, you can check "Shown By Default"
+
 ![Showcase](https://github.com/MyroG/VRChat-Android-Menu/blob/master/Doc/Toggle.PNG)
 
 ## Example
