@@ -5,8 +5,8 @@ This prefab adds a menu that can only be seen on Android smartphones, I am using
 ![Showcase](https://github.com/MyroG/VRChat-Android-Menu/blob/master/Doc/Lightcycle.jpg)
 
 With this menu you can
-- Toggle objects, like a mirror, audio sources...
-- Teleport the local player at different spots
+- Toggle objects, like a mirror, audio sources... you can use this menu as a quick setting menu
+- Teleport the local player at a given location, which can make your world more enjoyable to use. 
 
 ## Installation
 
