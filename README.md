@@ -6,7 +6,7 @@ This prefab adds a menu that can only be seen on Android smartphones, I am using
 
 With this menu you can
 - Toggle objects, like a mirror, audio sources... you can use this menu as a quick setting menu
-- Teleport the local player at a given location, which can make your world more enjoyable to use. 
+- Teleport the local player at a given location, to make your world easier to use on Android. 
 
 ## Installation
 
